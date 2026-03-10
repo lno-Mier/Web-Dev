@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* --- ОСНОВНАЯ СТРУКТУРА (FIX) --- */
         html, body {
             height: 100%; /* На весь экран */
@@ -247,4 +248,255 @@
             .footer-links {
                 justify-content: center;
             }
+=======
+/* --- ОСНОВНАЯ СТРУКТУРА (FIX) --- */
+        html, body {
+            height: 100%; /* На весь экран */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;           /* Включаем Flexbox */
+            flex-direction: column;  /* Элементы друг под другом */
+        }
+
+        /* Контейнер теперь занимает всё свободное место */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px; /* Небольшой отступ */
+            flex: 1;       /* !!! ЭТО КЛЮЧЕВОЕ СВОЙСТВО: Растягивает блок, толкая футер вниз */
+            flex-wrap: wrap; 
+        }
+
+        /* --- СТИЛИ КОНТЕНТА --- */
+        .left-column {
+            flex: 1;
+            margin-right: 30px;
+            max-width: 500px;
+        }
+
+        .logo {
+            color: #1877f2;
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: -10px;
+            margin-left: -5px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            color: #1c1e21;
+            line-height: 32px;
+            margin-top: 10px;
+        }
+
+        .right-column {
+            flex: 0 0 400px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+
+        .btn-login {
+            width: 100%;
+            background-color: #1877f2;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #166fe5;
+        }
+
+        .forgot-link {
+            display: block;
+            margin-top: 15px;
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+
+        .btn-create {
+            background-color: #42b72a;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-create:hover {
+            background-color: #36a420;
+        }
+
+        .page-create-text {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 14px;
+            color: #1c1e21;
+        }
+        
+        .page-create-text a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #1c1e21;
+        }
+        
+        .page-create-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Адаптивность для телефонов */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 20px;
+            }
+            .left-column {
+                margin-right: 0;
+                margin-bottom: 40px;
+                max-width: 100%;
+            }
+            .tagline {
+                font-size: 24px;
+            }
+            .right-column {
+                width: 100%;
+                max-width: 400px;
+                flex: none;
+            }
+        }
+
+        /* --- СТИЛИ ФУТЕРА --- */
+        .fb-footer {
+            background-color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            flex-shrink: 0; /* Запрещаем футеру сжиматься */
+        }
+
+        .footer-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 40px;
+            color: #737373;
+            font-size: 12px;
+        }
+
+        .footer-languages {
+            margin-bottom: 10px;
+        }
+
+        .fb-footer a {
+            text-decoration: none;
+            color: #8a8d91;
+            margin-right: 10px;
+            display: inline-block;
+            white-space: nowrap; /* Чтобы ссылки не разрывались некрасиво */
+        }
+
+        .fb-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .plus-btn {
+            background-color: #f5f6f7;
+            border: 1px solid #ccd0d5;
+            color: #4b4f56;
+            font-weight: bold;
+            padding: 0 8px;
+            cursor: pointer;
+            font-size: 12px;
+            height: 20px;
+            line-height: 18px;
+            border-radius: 2px;
+            vertical-align: top;
+            display: inline-block;
+        }
+        
+        .plus-btn:hover {
+            background-color: #ebedf0;
+        }
+
+        .footer-divider {
+            border-bottom: 1px solid #dddfe2;
+            margin: 8px 0 10px 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Ссылки красиво переносятся */
+        }
+        
+        .footer-links a {
+             margin-bottom: 0;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            color: #737373;
+        }
+        
+        @media (max-width: 900px) {
+            .footer-content {
+                padding: 0 20px;
+                text-align: center;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+>>>>>>> 55e63d972fe763ca051aa3f346640e86dfbd13f6
         }
