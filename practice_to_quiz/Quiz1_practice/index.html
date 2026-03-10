@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Tracker</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .completed { text-decoration: line-through; color: gray; }
+        .stats { margin-top: 20px; font-weight: bold; }
+        li { margin: 5px 0; cursor: pointer; }
+        button { margin-left: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Мои задачи</h1>
+    
+    <div>
+        <input type="text" id="taskInput" placeholder="Введите задачу...">
+        <button id="addBtn">Добавить</button>
+    </div>
+
+    <ul id="taskList">
+        <!-- Сюда будут добавляться задачи -->
+    </ul>
+
+    <div class="stats">
+        Всего задач: <span id="totalCount">0</span> | 
+        Выполнено: <span id="doneCount">0</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

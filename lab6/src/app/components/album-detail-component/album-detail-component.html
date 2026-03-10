@@ -1,0 +1,38 @@
+<div class="detail-page">
+  <h1>Travel Collection Detail</h1>
+
+  <div *ngIf="loading" class="loading">
+    Loading album...
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="successMessage" class="success">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="!loading && album" class="detail-card">
+    <p><strong>Album ID:</strong> {{ album.id }}</p>
+    <p><strong>User ID:</strong> {{ album.userId }}</p>
+
+    <label for="title"><strong>Title:</strong></label>
+    <input
+      id="title"
+      type="text"
+      [(ngModel)]="album.title"
+      class="title-input"
+    />
+
+    <div class="actions">
+      <button (click)="saveAlbum()">Save</button>
+
+      <a [routerLink]="['/albums', album.id, 'photos']">
+        View Photos
+      </a>
+
+      <button (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>

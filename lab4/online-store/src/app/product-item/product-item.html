@@ -1,0 +1,32 @@
+<div class="product-card">
+  <div class="image-container">
+    <img [src]="currentImage" alt="{{ product.name }}" class="main-img">
+    
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images" 
+           [src]="img" 
+           (click)="changeImage(img)" 
+           [class.active]="img === currentImage"
+           class="thumb">
+    </div>
+  </div>
+
+  <div class="info">
+    <h3><a [href]="product.link" target="_blank">{{ product.name }}</a></h3>
+    
+    <p class="desc">{{ product.description }}</p>
+    
+    <div class="rating">
+      Rating: {{ product.rating }} / 5 ⭐
+    </div>
+
+    <div class="price">
+      {{ product.price }} ₸
+    </div>
+
+    <div class="share-buttons">
+      <button (click)="shareWhatsApp()" class="btn-wa">Share on WhatsApp</button>
+      <button (click)="shareTelegram()" class="btn-tg">Share on Telegram</button>
+    </div>
+  </div>
+</div>
